@@ -23,6 +23,7 @@ public class Lesson1 extends Base {
         Thread.sleep(2000);
         driver.findElement(By.id("tool-2")).click();
         Thread.sleep(2000);
+        driver.quit();
     }
 
 
