@@ -5,7 +5,7 @@ Feature: Techlistic main page test
     And User enter Yalcin on Lastname area
     And User click Female
     And User click Experience_four
-    And User enter "19.03.2000" on DatePicker area
+    And User enter "29.06.2000" on DatePicker area
     And User click Automation_Tester button
     And User click Selenium_WebDriver button
 

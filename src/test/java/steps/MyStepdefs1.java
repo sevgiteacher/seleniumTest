@@ -1,31 +1,32 @@
-import ExampleSelenium.Base;
+package steps;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MyStepdefs {
+public class MyStepdefs1 {
     private final String chrome = "/Users/math/Desktop/Testing/chromedriver";
     WebDriver driver;
 
-//    @Before
+    @Before
     public void began(){
         System.setProperty("webdriver.chrome.driver",chrome);
         driver = new ChromeDriver();
     }
- //   @After
+    @After
     public void end(){
         driver.quit();
     }
 
     @Given("User views Practice Form page")
     public void userViewsPracticeFormPage() {
-        System.setProperty("webdriver.chrome.driver",chrome);
-        driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver",chrome);
+//        driver = new ChromeDriver();
         driver.get("https://www.techlistic.com/p/selenium-practice-form.html");
         driver.manage().window().maximize();
     }
@@ -56,7 +57,7 @@ public class MyStepdefs {
 
     @And("User enter {string} on DatePicker area")
     public void userEnterOnDatePickerArea(String arg0) throws InterruptedException {
-        driver.findElement(By.id("datepicker")).sendKeys("19.03.2000");
+        driver.findElement(By.id("datepicker")).sendKeys("20.06.2000");
         Thread.sleep(2000);
     }
 
@@ -70,6 +71,6 @@ public class MyStepdefs {
     public void userClickSelenium_WebDriverButton() throws InterruptedException {
         driver.findElement(By.id("tool-2")).click();
         Thread.sleep(2000);
-        driver.quit();
+
     }
 }

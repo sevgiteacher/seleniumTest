@@ -26,7 +26,7 @@ public class Lesson4_Wait extends Base {
         List<WebElement> result = driver.findElements(By.xpath("//h3[@class='LC20lb DKV0Md']"));
         result.get(0).click();
         Thread.sleep(1000);
-///
+
 
 
 
